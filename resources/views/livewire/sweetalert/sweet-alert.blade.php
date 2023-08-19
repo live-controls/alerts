@@ -77,7 +77,7 @@
         }
     });
 
-    @if($hasalert)
+    @if($hasAlert)
         @if($inputFields !== false)
             alert('Inputfields not supported in this version due to exceptions');
             Swal.fire({
