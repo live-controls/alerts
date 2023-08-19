@@ -53,7 +53,7 @@ class SweetAlert extends Component
     public function createAlert(array $alertInfo, bool $fromListener = true){
         $this->hasAlert = true;
         $this->type = $alertInfo["type"];
-        $this->title = \Helvetiapps\LiveControls\Utils\Arrays::array_get("title", $alertInfo, __('livecontrols::alerts.'.$this->type));
+        $this->title = \Helvetiapps\LiveControls\Utils\Arrays::array_get("title", $alertInfo, __('livecontrols-alerts::alerts.'.$this->type));
         $this->message = \Helvetiapps\LiveControls\Utils\Arrays::array_get('message', $alertInfo);
         $this->html = \Helvetiapps\LiveControls\Utils\Arrays::array_get('html', $alertInfo);
         $this->confirmButtonText = \Helvetiapps\LiveControls\Utils\Arrays::array_get('confirmButtonText', $alertInfo);

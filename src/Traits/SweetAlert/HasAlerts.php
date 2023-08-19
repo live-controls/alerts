@@ -11,7 +11,7 @@ trait HasAlerts{
     public function alertInfo(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
         $this->dispatchBrowserEvent('alert', [
             'type' => 'info',
-            'title' => is_null($title) ? __('livecontrols::alerts.info') : $title,
+            'title' => is_null($title) ? __('livecontrols-alerts::alerts.info') : $title,
             'message' => $message,
             'confirmButtonText' => $confirmText,
             'confirmEvent' => $confirmEvent,
@@ -27,7 +27,7 @@ trait HasAlerts{
     public function alertWarn(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
         $this->dispatchBrowserEvent('alert', [
             'type' => 'warning',
-            'title' => is_null($title) ? __('livecontrols::alerts.warning') : $title,
+            'title' => is_null($title) ? __('livecontrols-alerts::alerts.warning') : $title,
             'message' => $message,
             'confirmButtonText' => $confirmText,
             'confirmEvent' => $confirmEvent,
@@ -43,7 +43,7 @@ trait HasAlerts{
     public function alertSuccess(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
         $this->dispatchBrowserEvent('alert', [
             'type' => 'success',
-            'title' => is_null($title) ? __('livecontrols::alerts.success') : $title,
+            'title' => is_null($title) ? __('livecontrols-alerts::alerts.success') : $title,
             'message' => $message,
             'confirmButtonText' => $confirmText,
             'confirmEvent' => $confirmEvent,
@@ -59,7 +59,7 @@ trait HasAlerts{
     public function alertError(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
         $this->dispatchBrowserEvent('alert', [
             'type' => 'error',
-            'title' => is_null($title) ? __('livecontrols::alerts.error') : $title,
+            'title' => is_null($title) ? __('livecontrols-alerts::alerts.error') : $title,
             'message' => $message,
             'confirmButtonText' => $confirmText,
             'confirmEvent' => $confirmEvent,
@@ -75,7 +75,7 @@ trait HasAlerts{
     public function alertQuestion(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
         $this->dispatchBrowserEvent('alert', [
             'type' => 'question',
-            'title' => is_null($title) ? __('livecontrols::alerts.question') : $title,
+            'title' => is_null($title) ? __('livecontrols-alerts::alerts.question') : $title,
             'message' => $message,
             'confirmButtonText' => $confirmText,
             'confirmEvent' => $confirmEvent,

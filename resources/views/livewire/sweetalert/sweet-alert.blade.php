@@ -134,7 +134,7 @@
     //OLD SYSTEM
         @if(Session::has('success'))
             Swal.fire({
-                title: "{{ __('livecontrols::alerts.success') }}",
+                title: "{{ __('livecontrols-alerts::alerts.success') }}",
                 text: "{{ session('success') }}",
                 icon: "success",
                 showConfirmButton: false,
@@ -147,7 +147,7 @@
 
         @if(Session::has("warning"))
             Swal.fire({
-                title: "{{ __('livecontrols::alerts.warning') }}",
+                title: "{{ __('livecontrols-alerts::alerts.warning') }}",
                 text: "{{ session('warning') }}",
                 icon: "warning",
                 showConfirmButton: false,
@@ -160,7 +160,7 @@
 
         @if(Session::has("exception"))
             Swal.fire({
-                title: "{{ __('livecontrols::alerts.error') }}",
+                title: "{{ __('livecontrols-alerts::alerts.error') }}",
                 text: "{{ session('exception') }}",
                 icon: "error",
                 showConfirmButton: false,
@@ -173,7 +173,7 @@
 
         @if(Session::has("info"))
             Swal.fire({
-                title: "{{ __('livecontrols::alerts.info') }}",
+                title: "{{ __('livecontrols-alerts::alerts.info') }}",
                 text: "{{ session('info') }}",
                 icon: "info",
                 showConfirmButton: false,
@@ -187,7 +187,7 @@
         window.addEventListener('showToast', toastarr => {
             if(toastarr["detail"][0] == "success"){
                 Swal.fire({
-                    title: '{{ __('livecontrols::alerts.success') }}',
+                    title: '{{ __('livecontrols-alerts::alerts.success') }}',
                     text: toastarr["detail"][1],
                     icon: "success",
                     showConfirmButton: false,
@@ -199,7 +199,7 @@
             }
             if(toastarr["detail"][0] == "warning"){
                 Swal.fire({
-                    title: '{{ __('livecontrols::alerts.warning') }}',
+                    title: '{{ __('livecontrols-alerts::alerts.warning') }}',
                     text: toastarr["detail"][1],
                     icon: "warning",
                     showConfirmButton: false,
@@ -211,7 +211,7 @@
             }
             if(toastarr["detail"][0] == "exception"){
                 Swal.fire({
-                    title: '{{ __('livecontrols::alerts.error') }}',
+                    title: '{{ __('livecontrols-alerts::alerts.error') }}',
                     text: toastarr["detail"][1],
                     icon: "error",
                     showConfirmButton: false,
@@ -223,7 +223,7 @@
             }
             if(toastarr["detail"][0] == "info"){
                 Swal.fire({
-                    title: '{{ __('livecontrols::alerts.info') }}',
+                    title: '{{ __('livecontrols-alerts::alerts.info') }}',
                     text: toastarr["detail"][1],
                     icon: "info",
                     showConfirmButton: false,
