@@ -34,7 +34,7 @@ class AlertsServiceProvider extends ServiceProvider
     });
       
     $this->publishes([
-      __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols/alerts'),
+      __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols-alerts'),
     ], 'livecontrols.alerts.localization');
 
     $this->publishes([
