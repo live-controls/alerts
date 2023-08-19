@@ -12,6 +12,7 @@ class AlertsServiceProvider extends ServiceProvider
 {
   public function register()
   {
+    $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'livecontrols_alerts');
     
   }
 
@@ -32,16 +33,16 @@ class AlertsServiceProvider extends ServiceProvider
       return $this->with('alert', $data);
     });
       
-      $this->publishes([
-        __DIR__.'/../config/config.php' => config_path('livecontrols.php'),
-      ], 'livecontrols.alerts.config');
+    $this->publishes([
+      __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols/alerts'),
+    ], 'livecontrols.alerts.localization');
 
-      $this->publishes([
-        __DIR__.'/../lang' => $this->app->langPath('vendor/livecontrols'),
-      ], 'livecontrols.alerts.localization');
+    $this->publishes([
+      __DIR__.'/../resources/views' => $this->app->resourcePath('views/vendor/livecontrols-alerts')
+    ], 'livecontrols.alerts.views');
 
-      $this->publishes([
-        __DIR__.'/../resources/views' => resource_path('views/vendor/livecontrols'),
-      ], 'livecontrols.alerts.views');
+    $this->publishes([
+      __DIR__.'/../config/config.php' => config_path('livecontrols_alerts.php'),
+    ], 'livecontrols.alerts.config');
   }
 }
