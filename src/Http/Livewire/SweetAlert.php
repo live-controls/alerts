@@ -62,7 +62,7 @@ class SweetAlert extends Component
         $this->confirmEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('confirmEvent', $alertInfo);
         $this->denyEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('denyEvent', $alertInfo);
         $this->cancelEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('cancelEvent', $alertInfo);
-        $this->timer = \Helvetiapps\LiveControls\Utils\Arrays::array_get('timer', $alertInfo, null);
+        $this->timer = \Helvetiapps\LiveControls\Utils\Arrays::array_get('timer', $alertInfo, config('livecontrols_alerts.default_timer', 2500));
         $this->timerProgressBar = \Helvetiapps\LiveControls\Utils\Arrays::array_get('timerProgressBar', $alertInfo, false);
         $this->inputFields = \Helvetiapps\LiveControls\Utils\Arrays::array_get('inputFields', $alertInfo, false);
         

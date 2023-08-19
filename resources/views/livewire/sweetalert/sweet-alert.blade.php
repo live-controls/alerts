@@ -104,7 +104,7 @@
                 text: "{{ $message }}",
                 html: "{{ $html }}",
                 icon: "{{ $type }}",
-                timer: {{ $timer == null ? 'null' : $timer }},
+                timer: {{ $timer == null ? config('livecontrols_alerts.default_timer', 2500) : $timer }},
                 timerProgressBar: {{ $timerProgressBar == null ? 'false' : 'true' }},
                 showConfirmButton: {{ $confirmButtonText == null ? 'false' : 'true' }},
                 showDenyButton: {{ $denyButtonText == null ? 'false' : 'true' }},
@@ -140,7 +140,7 @@
                 showConfirmButton: false,
                 showDenyButton: false,
                 showCancelButton: false,
-                timer: 2500,
+                timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                 timerProgressBar: true
             });
         @endif
@@ -153,7 +153,7 @@
                 showConfirmButton: false,
                 showDenyButton: false,
                 showCancelButton: false,
-                timer: 2500,
+                timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                 timerProgressBar: true
             });
         @endif
@@ -166,7 +166,7 @@
                 showConfirmButton: false,
                 showDenyButton: false,
                 showCancelButton: false,
-                timer: 2500,
+                timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                 timerProgressBar: true
             });
         @endif
@@ -179,7 +179,7 @@
                 showConfirmButton: false,
                 showDenyButton: false,
                 showCancelButton: false,
-                timer: 2500,
+                timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                 timerProgressBar: true
             });
         @endif
@@ -193,7 +193,7 @@
                     showConfirmButton: false,
                     showDenyButton: false,
                     showCancelButton: false,
-                    timer: 2500,
+                    timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                     timerProgressBar: true
                 });
             }
@@ -205,7 +205,7 @@
                     showConfirmButton: false,
                     showDenyButton: false,
                     showCancelButton: false,
-                    timer: 2500,
+                    timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                     timerProgressBar: true
                 });
             }
@@ -217,7 +217,7 @@
                     showConfirmButton: false,
                     showDenyButton: false,
                     showCancelButton: false,
-                    timer: 2500,
+                    timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                     timerProgressBar: true
                 });
             }
@@ -229,7 +229,7 @@
                     showConfirmButton: false,
                     showDenyButton: false,
                     showCancelButton: false,
-                    timer: 2500,
+                    timer: {{ config('livecontrols_alerts.default_timer', 2500) }},
                     timerProgressBar: true
                 });
             }
