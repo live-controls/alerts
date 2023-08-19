@@ -20,7 +20,7 @@
 ```ps
 composer require live-controls/alerts
 ```
-2. Include @livewire('livecontrols-alerts')
+2. Include @livewire('livecontrols-alerts') to layout
 
 
 ## Usage
