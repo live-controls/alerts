@@ -47,7 +47,7 @@ class SweetAlert extends Component
 
     public function render()
     {
-        return view('livecontrols::livewire.sweetalert.sweet-alert');
+        return view('livecontrols-alerts::livewire.sweetalert.sweet-alert');
     }
 
     public function createAlert(array $alertInfo, bool $fromListener = true){
