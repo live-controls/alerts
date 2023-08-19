@@ -184,7 +184,7 @@
             });
         @endif
 
-        window.addEventListener('showToast', toastarr => {
+        window.addEventListener('showAlert', toastarr => {
             if(toastarr["detail"][0] == "success"){
                 Swal.fire({
                     title: '{{ __('livecontrols-alerts::alerts.success') }}',
