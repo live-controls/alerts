@@ -1,0 +1,29 @@
+{
+    "name": "live-controls/alerts",
+    "description": "Sweet Alerts library for live-controls",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "LiveControls\\Alerts\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roman Wanner",
+            "email": "60240491+daredloco@users.noreply.github.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LiveControls\\Alerts\\AlertsServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7"
+    },
+    "require": {
+        "live-controls/utils": "^1.0"
+    }
+}
