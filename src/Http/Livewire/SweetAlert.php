@@ -14,6 +14,8 @@ class SweetAlert extends Component
     public $type;
     public $message;
 
+    public $darkMode;
+
     public $html;
 
     public $confirmButtonText;
@@ -42,6 +44,9 @@ class SweetAlert extends Component
         if(Session::has('alert')){
             $alertInfo = Session::get('alert');
             $this->createAlert($alertInfo, false);
+        }
+        if(is_null($this->darkMode) || !is_bool($this->darkMode)){
+            $this->darkMode = false;
         }
     }
 
