@@ -58,23 +58,23 @@ class SweetAlert extends Component
     public function createAlert(array $alertInfo, bool $fromListener = true){
         $this->hasAlert = true;
         $this->type = $alertInfo["type"];
-        $this->title = \Helvetiapps\LiveControls\Utils\Arrays::array_get("title", $alertInfo, __('livecontrols-alerts::alerts.'.$this->type));
-        $this->message = \Helvetiapps\LiveControls\Utils\Arrays::array_get('message', $alertInfo);
-        $this->html = \Helvetiapps\LiveControls\Utils\Arrays::array_get('html', $alertInfo);
-        $this->confirmButtonText = \Helvetiapps\LiveControls\Utils\Arrays::array_get('confirmButtonText', $alertInfo);
-        $this->denyButtonText = \Helvetiapps\LiveControls\Utils\Arrays::array_get('denyButtonText', $alertInfo);
-        $this->cancelButtonText = \Helvetiapps\LiveControls\Utils\Arrays::array_get('cancelButtonText', $alertInfo);
-        $this->confirmEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('confirmEvent', $alertInfo);
-        $this->denyEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('denyEvent', $alertInfo);
-        $this->cancelEvent = \Helvetiapps\LiveControls\Utils\Arrays::array_get('cancelEvent', $alertInfo);
-        $this->timer = \Helvetiapps\LiveControls\Utils\Arrays::array_get('timer', $alertInfo, config('livecontrols_alerts.default_timer', 2500));
-        $this->timerProgressBar = \Helvetiapps\LiveControls\Utils\Arrays::array_get('timerProgressBar', $alertInfo, false);
-        $this->inputFields = \Helvetiapps\LiveControls\Utils\Arrays::array_get('inputFields', $alertInfo, false);
+        $this->title = \LiveControls\Utils\Arrays::array_get("title", $alertInfo, __('livecontrols-alerts::alerts.'.$this->type));
+        $this->message = \LiveControls\Utils\Arrays::array_get('message', $alertInfo);
+        $this->html = \LiveControls\Utils\Arrays::array_get('html', $alertInfo);
+        $this->confirmButtonText = \LiveControls\Utils\Arrays::array_get('confirmButtonText', $alertInfo);
+        $this->denyButtonText = \LiveControls\Utils\Arrays::array_get('denyButtonText', $alertInfo);
+        $this->cancelButtonText = \LiveControls\Utils\Arrays::array_get('cancelButtonText', $alertInfo);
+        $this->confirmEvent = \LiveControls\Utils\Arrays::array_get('confirmEvent', $alertInfo);
+        $this->denyEvent = \LiveControls\Utils\Arrays::array_get('denyEvent', $alertInfo);
+        $this->cancelEvent = \LiveControls\Utils\Arrays::array_get('cancelEvent', $alertInfo);
+        $this->timer = \LiveControls\Utils\Arrays::array_get('timer', $alertInfo, config('livecontrols_alerts.default_timer', 2500));
+        $this->timerProgressBar = \LiveControls\Utils\Arrays::array_get('timerProgressBar', $alertInfo, false);
+        $this->inputFields = \LiveControls\Utils\Arrays::array_get('inputFields', $alertInfo, false);
         
-        $this->imageUrl = \Helvetiapps\LiveControls\Utils\Arrays::array_get('imageUrl', $alertInfo, null);
-        $this->imageWidth = \Helvetiapps\LiveControls\Utils\Arrays::array_get('imageWidth', $alertInfo, null);
-        $this->imageHeight = \Helvetiapps\LiveControls\Utils\Arrays::array_get('imageHeight', $alertInfo, null);
-        $this->imageAlt = \Helvetiapps\LiveControls\Utils\Arrays::array_get('imageAlt', $alertInfo, null);
+        $this->imageUrl = \LiveControls\Utils\Arrays::array_get('imageUrl', $alertInfo, null);
+        $this->imageWidth = \LiveControls\Utils\Arrays::array_get('imageWidth', $alertInfo, null);
+        $this->imageHeight = \LiveControls\Utils\Arrays::array_get('imageHeight', $alertInfo, null);
+        $this->imageAlt = \LiveControls\Utils\Arrays::array_get('imageAlt', $alertInfo, null);
 
         //If Inputfields are not empty, add them to the bottom of $this->html
         $this->inputFieldNames = "";
