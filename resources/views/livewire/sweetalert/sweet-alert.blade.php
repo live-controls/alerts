@@ -1,10 +1,12 @@
 <div>
     <!-- SWEET ALERT 2 -->
-    @if($darkMode === true)
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
-    @endif
+    @if(config('livecontrols_alerts.local_files', false) === false)
+        @if($darkMode === true)
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
+        @endif
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    @endif
 
     <script type="text/javascript">
     //NEW SYSTEM
