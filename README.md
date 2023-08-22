@@ -129,3 +129,8 @@ $this->dispatchBrowserEvent('showAlert', ['info', 'This is an information']); //
 $this->dispatchBrowserEvent('showAlert', ['warning', 'This is a warning']); //Will show a warning popup
 ```
 As you can see the old system is very limited, you can only add the message to it and thats it. If you work on a new project, use the new system instead!
+
+### Manual Installation
+If you prefer to install the SweetAlert2 scripts yourself, follow the instructions here: 
+Installation: https://sweetalert2.github.io/#download
+Installation of Themes: https://github.com/sweetalert2/sweetalert2-themes
