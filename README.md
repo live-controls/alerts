@@ -20,7 +20,7 @@
 ```ps
 composer require live-controls/alerts
 ```
-2. Include @livewire('livecontrols-alerts') to layout before </body> tag
+2. Include @livewire('livecontrols-sweetalert') to layout before </body> tag
 
 
 ## Usage
@@ -37,52 +37,52 @@ Required Parameters: 'type' and 'message', the rest is optional
 
 From Controller
 ```php
-$popupType = 'success'; //Can be success, warning, error, info and question
-$popupTitle = 'Some Title'; //Will be shown as title
-$popupMessage = 'This is some message'; //can contain HTML so be aware of that!
-$popupConfirmButtonText = 'Confirm'; //The text shown on the confirm button, if you dont want to show the button set it to null or don't set it in the call
-$popupDenyButtonText = 'Deny'; //Same as confirm button
-$popupCancelButtonText = 'Cancel'; //Same as confirm button
-$popupConfirmEvent = 'confirmed'; //The name of the event that will be called when the user clicks on the confirm button set to null or don't set it in the call to ignore it
-$popupDenyEvent = 'denied'; //Same as confirm event
-$popupCancelEvent = 'canceled'; //Same as confirm event
+$alertType = 'success'; //Can be success, warning, error, info and question
+$alertTitle = 'Some Title'; //Will be shown as title
+$alertMessage = 'This is some message'; //can contain HTML so be aware of that!
+$alertConfirmButtonText = 'Confirm'; //The text shown on the confirm button, if you dont want to show the button set it to null or don't set it in the call
+$alertDenyButtonText = 'Deny'; //Same as confirm button
+$alertCancelButtonText = 'Cancel'; //Same as confirm button
+$alertConfirmEvent = 'confirmed'; //The name of the event that will be called when the user clicks on the confirm button set to null or don't set it in the call to ignore it
+$alertDenyEvent = 'denied'; //Same as confirm event
+$alertCancelEvent = 'canceled'; //Same as confirm event
 
 //New in 0.4-dev
-$popupTimer = 2000; //Will close the window after 2000ms
-$popupTimerProgressBar = true; //If set to true it will show a progressbar on the bottom
-$popupImageUrl = 'https://yourpage.com/somepicture.jpg'; //Sets a picture for the popup
-$popupImageHeight = 100; //Sets the height of the image
-$popupImageWidth = 100; //Sets the width of the image
-$popupImageAlt = 'Some Text'; //Sets an alternative text to the image
-$popupHtml = '<strong>I'm strong!</strong>'; //Sets the html of the message, ignores message if set! Take care with that and don't allow userinput on this one!
+$alertTimer = 2000; //Will close the window after 2000ms
+$alertTimerProgressBar = true; //If set to true it will show a progressbar on the bottom
+$alertImageUrl = 'https://yourpage.com/somepicture.jpg'; //Sets a picture for the alert
+$alertImageHeight = 100; //Sets the height of the image
+$alertImageWidth = 100; //Sets the width of the image
+$alertImageAlt = 'Some Text'; //Sets an alternative text to the image
+$alertHtml = '<strong>I'm strong!</strong>'; //Sets the html of the message, ignores message if set! Take care with that and don't allow userinput on this one!
 
-return redirect()->route('dashboard')->with('popup', [
-'type' => $popupType,
-'title' => $popupTitle,
-'message' => $popupMessage,
-'confirmButtonText' => $popupConfirmButtonText,
-'denyButtonText' => $popupDenyButtonText,
-'cancelButtonText' => $popupCancelButtonText,
-'confirmEvent' => $popupConfirmEvent,
-'denyEvent' => $popupDenyEvent,
-'cancelEvent' => $popupCancelEvent,
+return redirect()->route('dashboard')->with('alert', [
+'type' => $alertType,
+'title' => $alertTitle,
+'message' => $alertMessage,
+'confirmButtonText' => $alertConfirmButtonText,
+'denyButtonText' => $alertDenyButtonText,
+'cancelButtonText' => $alertCancelButtonText,
+'confirmEvent' => $alertConfirmEvent,
+'denyEvent' => $alertDenyEvent,
+'cancelEvent' => $alertCancelEvent,
 
-'timer' => $popupTimer,
-'timerProgressBar' => $popupTimerProgressBar,
-'imageUrl' => $popupImageUrl,
-'imageHeight' => $popupImageHeight,
-'imageWidth' => $popupImageWidth,
-'imageAlt' => $popupImageAlt,
-'html' => $popupHtml
+'timer' => $alertTimer,
+'timerProgressBar' => $alertTimerProgressBar,
+'imageUrl' => $alertImageUrl,
+'imageHeight' => $alertImageHeight,
+'imageWidth' => $alertImageWidth,
+'imageAlt' => $alertImageAlt,
+'html' => $alertHtml
 ]');
 
 //New in 0.5-dev
-return redirect()->route('dashboard')->popup(['type' => 'success', 'message' => 'Hello World!']);
+return redirect()->route('dashboard')->alert(['type' => 'success', 'message' => 'Hello World!']);
 ```
 
 From Livewire
 ```php
-$this->dispatchBrowserEvent('popup', [
+$this->dispatchBrowserEvent('alert', [
  'type' => 'error',
  'title' => 'Test Title',
  'message' => 'It\'s working!',
@@ -104,7 +104,7 @@ $this->dispatchBrowserEvent('popup', [
 ]);
 
 //New in 0.5-dev
-$this->popup([
+$this->alert([
 'type' => 'info',
 'message' => 'Hello World!'
 ]);
@@ -123,9 +123,9 @@ return redirect()->route('dashboard')->with('warning', 'This is a warning'); //W
 
 From Livewire
 ```php
-$this->dispatchBrowserEvent('showToast', ['success', 'This had success!']); //Will show a success popup
-$this->dispatchBrowserEvent('showToast', ['exception', 'This had an exception']); //Will show an error popup
-$this->dispatchBrowserEvent('showToast', ['info', 'This is an information']); //Will show an info popup
-$this->dispatchBrowserEvent('showToast', ['warning', 'This is a warning']); //Will show a warning popup
+$this->dispatchBrowserEvent('showAlert', ['success', 'This had success!']); //Will show a success popup
+$this->dispatchBrowserEvent('showAlert', ['exception', 'This had an exception']); //Will show an error popup
+$this->dispatchBrowserEvent('showAlert', ['info', 'This is an information']); //Will show an info popup
+$this->dispatchBrowserEvent('showAlert', ['warning', 'This is a warning']); //Will show a warning popup
 ```
 As you can see the old system is very limited, you can only add the message to it and thats it. If you work on a new project, use the new system instead!
