@@ -1,7 +1,18 @@
 <div>
     <!-- SWEET ALERT 2 -->
     @if(config('livecontrols_alerts.local_files', false) === false)
-        @if($darkMode === true)
+        @if(config('livecontrols_alerts.auto_darkmode', false) === true)
+            <script type="text/javascript">
+                window.onload = function(){
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        let styleNode = document.createElement("link");
+                        styleNode.setAttribute("rel", "stylesheet");
+                        styleNode.setAttribute("type", "text/css");
+                        styleNode.setAttribute("href", "//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css");
+                    } 
+                }
+            </script>
+        @elseif($darkMode === true)
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
         @endif
 
