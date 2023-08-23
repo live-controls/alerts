@@ -9,6 +9,7 @@
                         styleNode.setAttribute("rel", "stylesheet");
                         styleNode.setAttribute("type", "text/css");
                         styleNode.setAttribute("href", "//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css");
+                        document.getElementsByTagName("head")[0].appendChild(styleNode);
                     } 
                 }
             </script>
