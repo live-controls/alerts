@@ -20,7 +20,7 @@
 ```ps
 composer require live-controls/alerts
 ```
-2. Include @livewire('livecontrols-sweetalert') to layout before </body> tag
+2. Include @livewire('livecontrols-sweetalert') to layout before /body tag
 
 
 ## Usage
