@@ -4,8 +4,8 @@
  Alerts library for live-controls
 
 ## Requirements
-- Laravel 9+
-- Livewire 2+
+- Laravel 10+
+- Livewire 3+
 
 
 ## Translations
