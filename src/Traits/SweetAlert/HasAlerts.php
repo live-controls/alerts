@@ -5,11 +5,11 @@ namespace LiveControls\Alerts\Traits\SweetAlert;
 trait HasAlerts{
 
     public function alert(array $data){
-        $this->dispatchBrowserEvent('alert',$data); 
+        $this->dispatch('alert',$data); 
     }
 
     public function alertInfo(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
-        $this->dispatchBrowserEvent('alert', [
+        $this->dispatch('alert', [
             'type' => 'info',
             'title' => is_null($title) ? __('livecontrols-alerts::alerts.info') : $title,
             'message' => $message,
@@ -25,7 +25,7 @@ trait HasAlerts{
     }
 
     public function alertWarn(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
-        $this->dispatchBrowserEvent('alert', [
+        $this->dispatch('alert', [
             'type' => 'warning',
             'title' => is_null($title) ? __('livecontrols-alerts::alerts.warning') : $title,
             'message' => $message,
@@ -41,7 +41,7 @@ trait HasAlerts{
     }
 
     public function alertSuccess(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
-        $this->dispatchBrowserEvent('alert', [
+        $this->dispatch('alert', [
             'type' => 'success',
             'title' => is_null($title) ? __('livecontrols-alerts::alerts.success') : $title,
             'message' => $message,
@@ -57,7 +57,7 @@ trait HasAlerts{
     }
 
     public function alertError(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
-        $this->dispatchBrowserEvent('alert', [
+        $this->dispatch('alert', [
             'type' => 'error',
             'title' => is_null($title) ? __('livecontrols-alerts::alerts.error') : $title,
             'message' => $message,
@@ -73,7 +73,7 @@ trait HasAlerts{
     }
 
     public function alertQuestion(string $message, string $title = null, ?int $timer = null, string $confirmText = null, string $confirmEvent = null, string $denyText = null, string $denyEvent = null, string $cancelText = null, string $cancelEvent = null){
-        $this->dispatchBrowserEvent('alert', [
+        $this->dispatch('alert', [
             'type' => 'question',
             'title' => is_null($title) ? __('livecontrols-alerts::alerts.question') : $title,
             'message' => $message,

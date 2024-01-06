@@ -11,7 +11,7 @@
     <script type="text/javascript">
     //NEW SYSTEM
     window.addEventListener('alert', event => {
-        Livewire.emit('alertSent', event.detail);
+        Livewire.dispatch('alertSent', event.detail);
     });
 
     Livewire.on('showAlert', alertArr => {
@@ -41,12 +41,12 @@
                     alertArr["inputFields"].forEach(function callback(value, index){
                         results.set(value["name"], document.getElementById(value["name"]).value);
                     });
-                    Livewire.emit(alertArr["confirmEvent"], Object.fromEntries(results));
+                    Livewire.dispatch(alertArr["confirmEvent"], Object.fromEntries(results));
                 }else if (result.isDenied){
-                    Livewire.emit(alertArr["denyEvent"]);
+                    Livewire.dispatch(alertArr["denyEvent"]);
                 }else if(result.isDismissed){
                     if(result.dismiss == Swal.DismissReason.cancel){
-                        Livewire.emit(alertArr["cancelEvent"]);
+                        Livewire.dispatch(alertArr["cancelEvent"]);
                     }
                 }
             });
@@ -71,12 +71,12 @@
                 imageAlt: alertArr["imageAlt"]
             }).then((result) => { 
                 if(result.isConfirmed){
-                    Livewire.emit(alertArr["confirmEvent"]);
+                    Livewire.dispatch(alertArr["confirmEvent"]);
                 }else if (result.isDenied){
-                    Livewire.emit(alertArr["denyEvent"]);
+                    Livewire.dispatch(alertArr["denyEvent"]);
                 }else if(result.isDismissed){
                     if(result.dismiss == Swal.DismissReason.cancel){
-                        Livewire.emit(alertArr["cancelEvent"]);
+                        Livewire.dispatch(alertArr["cancelEvent"]);
                     }
                 }
             });
@@ -124,12 +124,12 @@
                 imageAlt: "{{ $imageAlt }}"
             }).then((result) => { 
                 if(result.isConfirmed){
-                    Livewire.emit('{{ $confirmEvent }}');
+                    Livewire.dispatch('{{ $confirmEvent }}');
                 }else if (result.isDenied){
-                    Livewire.emit('{{ $denyEvent }}');
+                    Livewire.dispatch('{{ $denyEvent }}');
                 }else if(result.isDismissed){
                     if(result.dismiss == Swal.DismissReason.cancel){
-                        Livewire.emit('{{ $cancelEvent }}');
+                        Livewire.dispatch('{{ $cancelEvent }}');
                     }
                 }
             });

@@ -21,9 +21,10 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^7"
+        "orchestra/testbench": "^8"
     },
     "require": {
-        "live-controls/utils": "^1.0"
+        "live-controls/utils": "^1.0",
+        "livewire/livewire": "^3.0"
     }
 }

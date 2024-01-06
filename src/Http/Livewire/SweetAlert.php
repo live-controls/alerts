@@ -118,6 +118,6 @@ class SweetAlert extends Component
             'inputFields' => $this->inputFields
         ];
 
-        $this->emit('showAlert', $alertArr);
+        $this->dispatch('showAlert', $alertArr);
     }
 }
