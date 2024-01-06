@@ -2,6 +2,7 @@
     "name": "live-controls/alerts",
     "description": "Sweet Alerts library for live-controls",
     "type": "library",
+    "version": "2.0",
     "autoload": {
         "psr-4": {
             "LiveControls\\Alerts\\": "src/"
